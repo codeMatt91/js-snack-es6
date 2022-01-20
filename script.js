@@ -11,15 +11,20 @@ Stampare ain console la bici con peso minore utilizzando destructuring e templat
 
 // # Costruisco l'array 
 const bikes = [
-   {name: 'Orbea', weight: 3},
+   {name: 'Orbea', weight: 11},
    {name: 'Pinarello', weight: 7},
    {name: 'Speedoo', weight: 5},
    {name: 'Bianchi', weight: 6},
    {name: 'Merida', weight: 10},
 ];
 
+let light = 0;
+
 for(let i = 0; i < bikes.length; i++){
-   if(bikes[0].peso < bikes[1].peso){
-      console.log(bikes[0]);
+  
+   if(bikes[i].peso < bikes[light].peso){
+      light = i;
+      
    }
 }
+console.log(bikes[light].peso);
