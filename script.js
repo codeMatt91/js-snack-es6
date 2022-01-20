@@ -18,6 +18,7 @@ const bikes = [
    {name: 'Merida', weight: 10},
 ];
 
+// # Ciclo per estrapolare tutti i pesi in un array 
 let light = [];
 for(let i = 0; i < bikes.length; i++){
 
@@ -25,5 +26,7 @@ for(let i = 0; i < bikes.length; i++){
    light.push(weight);
 }
 console.log(light);
+
+// # Determino il più piccolo 
 const min = Math.min(...light);
 console.log(min);
