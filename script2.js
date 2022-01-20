@@ -24,17 +24,17 @@ const clubs = [
 // # Ciclo for per girare nell'array 
 for(let i = 0; i < clubs.length; i++){
    let randomPoint = Math.floor(Math.random() * 100) + 1;
-   let randomFoul = Math.floor(Math.random() * 30) + 1;
+   let randomFoul = Math.floor(Math.random() * 50) + 1;
    clubs[i].points = randomPoint;
    clubs[i].fouls = randomFoul;
 }
 
 console.table(clubs);
 
+// # Ciclo per stampare solo 2 valori degli oggetti 
 for(let j = 0; j < clubs.length; j++){
 
-   const nome = clubs[j].name;
-   const falli = clubs[j].fouls;
+   const {name, fouls} = clubs[j];
    
-   console.table(nome, falli);
+   console.table(name, fouls);
 }
