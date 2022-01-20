@@ -18,13 +18,12 @@ const bikes = [
    {name: 'Merida', weight: 10},
 ];
 
-let light = 0;
-
+let light = [];
 for(let i = 0; i < bikes.length; i++){
-  
-   if(bikes[i].peso < bikes[light].peso){
-      light = i;
-      
-   }
+
+   let {weight} = bikes[i];
+   light.push(weight);
 }
-console.log(bikes[light].peso);
+console.log(light);
+const min = Math.min(...light);
+console.log(min);
