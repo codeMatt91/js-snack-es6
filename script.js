@@ -18,3 +18,8 @@ const bikes = [
    {name: 'Merida', weight: 10},
 ];
 
+for(let i = 0; i < bikes.length; i++){
+   if(bikes[0].peso < bikes[1].peso){
+      console.log(bikes[0]);
+   }
+}
