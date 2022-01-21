@@ -29,7 +29,11 @@ const newStudents = students.map((student) => {
    const lettFirst = student.name.charAt(0).toUpperCase();
    const lettRest = student.name.substring(1).toLowerCase();
    return lettFirst + lettRest;
-   
+
 });
 
 console.log(newStudents);
+
+const newVote = students.filter((student) => student.votExams >= 70 ? true : false);
+
+console.log(newVote);
