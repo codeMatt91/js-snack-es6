@@ -35,7 +35,7 @@ if (bikes[i].peso < min) {
 };
 console.log(min);
 
-write.innerHTML = `Il numero più piccolo è: ${min}`
+write.innerHTML = `Il peso della bici più leggera è: ${min}kg`
 
 
 // # Ciclo con funzione Math.min 
