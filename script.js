@@ -9,6 +9,9 @@ Stampare ain console la bici con peso minore utilizzando destructuring e templat
 
 */
 
+// # Recupero il numero in paggina 
+const write = document.getElementById('display');
+
 // # Costruisco l'array 
 const bikes = [
    {name: 'Orbea', peso: 11},
@@ -31,6 +34,8 @@ if (currentWeight < min) {
 }
 };
 console.log(min);
+
+write.innerHTML = `Il numero più piccolo è: ${min}`
 
 
 // # Ciclo con funzione Math.min 
