@@ -37,3 +37,7 @@ console.log(newStudents);
 const newVote = students.filter((student) => student.votExams >= 70 ? true : false);
 
 console.log(newVote);
+
+const newStudents2 = students.filter((student) => (student.votExams >= 70 && student.id >= 120) ? true : false);
+
+console.log(newStudents2);
