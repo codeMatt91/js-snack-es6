@@ -11,28 +11,20 @@ Usiamo i nuovi metodi degli array visti oggi in classe.
 */
 
 // # Creo un array 
-const clubs = [
-   {name: 'Milan', points: 0, fouls: 0},
-   {name: 'Roma', points: 0, fouls: 0},
-   {name: 'Inter', points: 0, fouls: 0},
-   {name: 'Napoli', points: 0, fouls: 0},
-   {name: 'Atalanta', points: 0, fouls: 0},
-   {name: 'Cagliari', points: 0, fouls: 0},
-   {name: 'Bologna', points: 0, fouls: 0},
-   {name: 'Sampdoria', points: 0, fouls: 0},
-];
+const students = ['Federico', 'Matteo', 'Pietro', 'Federico', 'Nico', 'Anna', 'Maria', 'Giovanni', 'Marco'];
 
+const element = [];
 
-// # Ciclo for per girare nell'array 
-for(let i = 0; i < clubs.length; i++){
-   let randomPoint = Math.floor(Math.random() * 100) + 1;
-   let randomFoul = Math.floor(Math.random() * 50) + 1;
-   clubs[i].points = randomPoint;
-   clubs[i].fouls = randomFoul;
+function getElementsByArray(arrays,index1,index2){
+   
+   for(let i = 0; i < arrays.length; i++){
+      if(i >= index1 && i <= index2){
+         element.push(arrays[i]);
+      }
+   }
+   return element;
 }
 
-console.log(clubs);
+getElementsByArray(students, 3, 5);
 
-function getElementsByArray(array,index1,index2){
-
-}
+console.log(element)
