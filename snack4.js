@@ -9,19 +9,21 @@ ES (marco de iulio => Marco de iulio);
 2. Dobbiamo creare una lista di tutti gli studenti che hanno un totale di voti superiore a 70
 3. Dobbiamo creare una lista di tutti gli studenti che hanno un totale di voti superiore a 70 e id superiore a 120
 
+BONUS  nei nomi sulle targhe l'iniziale di ogni parola deve essere maiuscola
+ES.: (marco de iulio  => Marco De Iulio)
 */
 
 const students = [
-   {name: 'matteo', id: 122, votExams:25},
-   {name: 'mario', id: 155, votExams:60},
-   {name: 'anna', id: 23, votExams:123},
-   {name: 'mattia', id: 45, votExams:245},
-   {name: 'elisabetta', id: 56, votExams:90},
-   {name: 'alex', id: 200, votExams:40},
-   {name: 'miriam', id: 30, votExams:39},
-   {name: 'beatrice', id: 5, votExams:122},
-   {name: 'federico', id: 230, votExams:70},
-   {name: 'antonio', id: 145, votExams:37},
+   {name: 'matteo imbimbo', id: 122, votExams:25},
+   {name: 'mario rossi', id: 155, votExams:60},
+   {name: 'anna neri', id: 23, votExams:123},
+   {name: 'mattia grigi', id: 45, votExams:245},
+   {name: 'elisabetta bianchi', id: 56, votExams:90},
+   {name: 'alex mainardi', id: 200, votExams:40},
+   {name: 'miriam bernardi', id: 30, votExams:39},
+   {name: 'beatrice di carlo', id: 5, votExams:122},
+   {name: 'federico iodice', id: 230, votExams:70},
+   {name: 'antonio di bartolomei', id: 145, votExams:37},
 ];
 
 const newStudents = students.map((student) => {
@@ -41,3 +43,13 @@ console.log(newVote);
 const newStudents2 = students.filter((student) => (student.votExams >= 70 && student.id >= 120) ? true : false);
 
 console.log(newStudents2);
+
+
+students.forEach((student) => {
+   const namesNewStudent = student.name.split(' ');
+   namesNewStudent.forEach((student,index) => {
+      namesNewStudent[index] = student.charAt(0).toUpperCase() + student.substring(1).toLowerCase();
+   })
+   const newFrase = namesNewStudent.join(' ');
+   console.log(newFrase);
+})
