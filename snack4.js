@@ -13,6 +13,8 @@ BONUS  nei nomi sulle targhe l'iniziale di ogni parola deve essere maiuscola
 ES.: (marco de iulio  => Marco De Iulio)
 */
 
+// #Creo un array di oggetti 
+
 const students = [
    {name: 'matteo imbimbo', id: 122, votExams:25},
    {name: 'mario rossi', id: 155, votExams:60},
@@ -26,6 +28,7 @@ const students = [
    {name: 'antonio di bartolomei', id: 145, votExams:37},
 ];
 
+// # Punto numero 1 
 const newStudents = students.map((student) => {
    
    const lettFirst = student.name.charAt(0).toUpperCase();
@@ -36,15 +39,17 @@ const newStudents = students.map((student) => {
 
 console.log(newStudents);
 
+// # Punto numero 2 
 const newVote = students.filter((student) => student.votExams >= 70 ? true : false);
 
 console.log(newVote);
 
+// # Punto numero 3
 const newStudents2 = students.filter((student) => (student.votExams >= 70 && student.id >= 120) ? true : false);
 
 console.log(newStudents2);
 
-
+// # BONUS!!!! 
 students.forEach((student) => {
    const namesNewStudent = student.name.split(' ');
    namesNewStudent.forEach((student,index) => {
