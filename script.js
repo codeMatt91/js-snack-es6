@@ -25,12 +25,12 @@ const bikes = [
 
 let min = 0;
 for (let i = 0; i < bikes.length; i++) {
-const currentWeight = bikes[i].peso;
+
 if (i == 0) {
-    min = currentWeight;
+    min = bikes[i].peso;
 }
-if (currentWeight < min) {
-    min = currentWeight;
+if (bikes[i].peso < min) {
+    min = bikes[i].peso;
 }
 };
 console.log(min);
