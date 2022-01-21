@@ -23,19 +23,19 @@ const bikes = [
 
 // # Ciclo per estrapolare tutti i pesi in un array 
 
-let min = 0;
-for (let i = 0; i < bikes.length; i++) {
+// let min = 0;
+// for (let i = 0; i < bikes.length; i++) {
 
-if (i == 0) {
-    min = bikes[i].peso;
-}
-if (bikes[i].peso < min) {
-    min = bikes[i].peso;
-}
-};
-console.log(min);
+// if (i == 0) {
+//     min = bikes[i].peso;
+// }
+// if (bikes[i].peso < min) {
+//     min = bikes[i].peso;
+// }
+// };
+// console.log(min);
 
-write.innerHTML = `Il peso della bici più leggera è: ${min}kg`
+// write.innerHTML = `Il peso della bici più leggera è: ${min}kg`
 
 
 // # Ciclo con funzione Math.min 
@@ -50,3 +50,16 @@ write.innerHTML = `Il peso della bici più leggera è: ${min}kg`
 // // # Determino il più piccolo 
 // const min = Math.min(...light);
 // console.log(min);
+
+let lightesBike = bikes[0];
+
+for(let i = 0; i < bikes.length; i++){
+    const { peso } = bikes[i];
+    if(peso < lightesBike.peso){
+        lightesBike=bikes[i];
+    }
+}
+
+console.log(lightesBike);
+const { name, peso} = lightesBike;
+write.innerText = `Il peso della bici più leggera è: ${name} ${peso}kg`

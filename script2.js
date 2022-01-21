@@ -11,6 +11,9 @@ Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengo
 
 */
 
+// # Recupero l'oggetto in DOM
+const write = document.getElementById('display');
+
 // # Creo un array 
 const clubs = [
    {name: 'Milan', points: 0, fouls: 0},
@@ -32,9 +35,13 @@ for(let i = 0; i < clubs.length; i++){
 console.table(clubs);
 
 // # Ciclo per stampare solo 2 valori degli oggetti 
+let newTeam = [];
 for(let j = 0; j < clubs.length; j++){
 
    const {name, fouls} = clubs[j];
+   newTeam.push({name,fouls});
    
-   console.table(name, fouls);
 }
+
+console.table(newTeam);
+write.innerHTML = `${name}:  <br>`
