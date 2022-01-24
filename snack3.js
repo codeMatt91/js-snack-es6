@@ -31,12 +31,7 @@ const students = ['Federico', 'Matteo', 'Pietro', 'Federico', 'Nico', 'Anna', 'M
 
 // # Ciclo in un array con il Filter 
 function getElementsByArray(arrays,a,b){
-   const newArray = arrays.filter((item, index) => {
-      if(index >= a && index <= b){
-         return true;
-      }
-      return false;
-   })
+   const newArray = arrays.filter((item, index) => (index >= a && index <= b) ? true : false)
    return newArray;
 };
 
